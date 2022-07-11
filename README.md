@@ -4,6 +4,8 @@
 
 创意来自 [web-multiterminal-preview](https://github.com/zfowed/web-multiterminal-preview)
 
+[在线预览](https://liaooo.cn/preview/)
+
 - 可以预览你的网站在不同设备下的显示效果
 - 可以自定义不同设备的网址
 - 可以预览单个设备（点击设备边框即可）
