@@ -2,6 +2,8 @@
 
 ##### Vue3 + Vite
 
+每次更新网站都要重新截图、做预览图，太麻烦了！于是就有了这个小工具，这样每次更新只需要输入网址直接截图就可以了✨
+
 创意来自 [web-multiterminal-preview](https://github.com/zfowed/web-multiterminal-preview)
 
 [在线预览](https://liaooo.cn/preview/)
