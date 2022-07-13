@@ -116,7 +116,6 @@ const coverShow = ref(false)
 
 <style lang="less">
 * {
-  // font-weight: 200;
   margin: 0;
   padding: 0;
  -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -135,8 +134,6 @@ body {
   color: #333;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   user-select: none;
-  // -webkit-transform: translate3d(0, 0, 0);
-  // transform: translate3d(0, 0, 0);
 }
 
 .main {
@@ -193,6 +190,10 @@ body {
         height: 100%;
         z-index: -1;
         left: 50%;
+        border: 4px solid rgba(125, 125, 125, 0.1);
+        ::-webkit-scrollbar body{
+          display: none;
+        }
       }
     }
 
@@ -211,11 +212,11 @@ body {
       }
 
       iframe {
-        top: 28px;
-        width: 1440px;
-        height: 900px;
-        transform-origin: center top;
-        transform: translate(-50%) scale(0.44);
+       top: 27px;
+       width: 1440px;
+       height: 900px;
+       transform-origin: center top;
+       transform: translate(-50%) scale(0.44);
       }
     }
 
@@ -226,7 +227,6 @@ body {
       height: 340px;
       background: url(./assets/images/model/iphone.png) no-repeat 0 0/contain;
       transform: scale(0.8);
-
       &.active {
         top: 50%;
         left: 50%;
@@ -235,12 +235,12 @@ body {
       }
 
       iframe {
-        top: 12px;
+        top: 10px;
         width: 390px;
-        height: 861px;
+        height: 860px;
         transform-origin: center top;
         transform: translate(calc(-50%)) scale(0.37);
-        border-radius: 20px;
+        border-radius: 40px;
       }
     }
 
@@ -259,12 +259,12 @@ body {
       }
 
       iframe {
-        top: 14px;
+        top: 13px;
         width: 1180px;
-        height: 882px;
+        height: 886px;
         transform-origin: center top;
         transform: translate(calc(-50%)) scale(0.332);
-        border-radius: 15px;
+        border-radius: 20px;
       }
     }
   }
