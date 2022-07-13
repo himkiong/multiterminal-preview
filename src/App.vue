@@ -112,6 +112,20 @@ const coverShow = ref(false)
     </div>
     </transition>
   </section>
+  <footer>
+    <div class="link">
+      <a href="https://liaooo.cn/" target="_blank">
+        <img src="https://liaooo.cn/img/ico.png">
+      </a>
+      <a href="https://github.com/liaoliao0314/multiterminal-preview" target="_blank">
+        <i class="iconfont icon-github-fill"></i>
+      </a>
+      <a href="https://gitee.com/liaoliao314/multiterminal-preview" target="_blank">
+        <i class="iconfont icon-gitee"></i>
+      </a>
+    </div>
+
+  </footer>
 </template>
 
 <style lang="less">
@@ -120,6 +134,11 @@ const coverShow = ref(false)
   margin: 0;
   padding: 0;
  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+a{
+  color: #333;
+  text-decoration: none;
 }
 
 .fade-enter-active,
@@ -148,7 +167,12 @@ body {
   height: 100%;
   background-color: rgba(255, 255, 255, 1);
   z-index: 100;
-
+  &::after{
+    content: '';
+    display: table;
+    overflow: hidden;
+    clear: both;
+  }
   .close-preview{
       position: fixed;
       width: fit-content;
@@ -193,6 +217,7 @@ body {
         height: 100%;
         z-index: -1;
         left: 50%;
+        border: 4px solid rgba(125, 125, 125, 0.1);
       }
     }
 
@@ -211,11 +236,11 @@ body {
       }
 
       iframe {
-        top: 28px;
-        width: 1440px;
-        height: 900px;
-        transform-origin: center top;
-        transform: translate(-50%) scale(0.44);
+       top: 27px;
+       width: 1440px;
+       height: 900px;
+       transform-origin: center top;
+       transform: translate(-50%) scale(0.44);
       }
     }
 
@@ -226,7 +251,6 @@ body {
       height: 340px;
       background: url(./assets/images/model/iphone.png) no-repeat 0 0/contain;
       transform: scale(0.8);
-
       &.active {
         top: 50%;
         left: 50%;
@@ -235,12 +259,12 @@ body {
       }
 
       iframe {
-        top: 12px;
+        top: 10px;
         width: 390px;
-        height: 861px;
+        height: 860px;
         transform-origin: center top;
         transform: translate(calc(-50%)) scale(0.37);
-        border-radius: 20px;
+        border-radius: 40px;
       }
     }
 
@@ -259,12 +283,12 @@ body {
       }
 
       iframe {
-        top: 14px;
+        top: 13px;
         width: 1180px;
-        height: 882px;
+        height: 886px;
         transform-origin: center top;
         transform: translate(calc(-50%)) scale(0.332);
-        border-radius: 15px;
+        border-radius: 20px;
       }
     }
   }
@@ -401,6 +425,32 @@ body {
     .preview-box{
       transform:translate(-50%) scale(0.4);
     }
+  }
+}
+
+footer{
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  transform: translate(-50%);
+  .link{
+    *{
+      margin:0 5px;
+    }
+    img{
+      width: 18px;
+      height: 18px;
+      border: 6px;
+      vertical-align: middle;
+    }
+    .iconfont{
+      vertical-align: middle;
+      font-size: 20px;
+      &.icon-gitee{
+        font-size: 18px;
+      }
+    }
+
   }
 }
 </style>
